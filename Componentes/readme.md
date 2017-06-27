@@ -24,7 +24,7 @@ Os componentes referentes ao microsserviço de Agendamento especificados acima e
 ### Diagrama de Componentes | Especificação Paciente
 
 <img src="componente_paciente.png" />
-- O componente execução de paciente representa o conjunto de tarefas que estão sendo feitas em tempo de requisição, tal como
+-O componente execução de paciente representa o conjunto de tarefas que estão sendo feitas em tempo de requisição, tal como
 a parte do gerenciador de retorno. Nesse componente, o paciente é gerido por API's que fazem comunicação com o barramento SUS,
 obtendo informação do paciente. No entanto, ocorre a dependência de dados trafegados pelo gerenciador de espera, dado que o retorno
 é feito a partir de dados fornecidos pela fila de espera, pois quando a fila diminui, isso indica que existem vagas para atendimento
