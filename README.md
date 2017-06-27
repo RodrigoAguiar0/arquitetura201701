@@ -6,3 +6,10 @@ Trabalho em andamento na disciplina de arquitetura de software, pela Universidad
 - [Paciente]()
 - [Atenção a Saúde]("https://github.com/RodrigoAguiar0/arquitetura201701/tree/Fernando/M%C3%B3dulos#atenção-à-saúde")
 - [Agendamento]()
+
+
+## Diagramas de Componentes
+- [Financeiro Faturamento]()
+- [Paciente]()
+- [Atenção a Saúde](https://github.com/RodrigoAguiar0/arquitetura201701/tree/Fernando/M%C3%B3dulos#atenção-à-saúde)
+- [Agendamento]()
