@@ -1,13 +1,24 @@
 <img src="complemento_modulos.png">
 
-O diagrama mostrado anteriormente é um diagrama de módulo alto nível, ou seja, serve apenas para exemplificar
-o relacionamento entre os módulos, de tal forma que evidencie o uso de funcionalidades um do outro.
+O diagrama acima trata-se de uma arquitetura orientada a microserviços, de tal forma que cada microserviço tenha sua responsabilidade em disponibilizar os dados, atendendo os requisitos de qualidade.
 
-### Relacionamentos | Agendamento e Paciente
-	Um relacionamento notório é o módulo de agendamento de consultas, que por sua vez, faz o uso do módulo de paciente.
-	Na parte de agendamento, existe um requisito funcional que trata do controle de retornos, o qual fica responsável por
-	fornecer um data para que o paciente retorne para uma consulta. Além disso, paciente também fica responsável ou disponibiliza
-	tal funcionalidade
-## Atenção a saúde e paciente
-Outro exemplo de relacionamento e modulos utilizando funcionalidades entre si, é o módulo de atenção a saúde que agrega informações em paciente, principalmente na funcionalidade responsável
-por se tratar da situação bucal, prescrição médica e atestado do paciente.
+## Cliente
+O módulo cliente engloba as camadas fábrica, UI Views (User Interface), models e controllers.
+A parte de fábrica funciona de forma genérica, atuando do redirecionamento de aplicações de acordo com a funcionalidade exigida pelo usuário. Um exemplo disso, seria a parte de agendamento, o qual é reponspavel por realizar o agendamento das consultas, de tal forma que, ocorra a disponibilização de uma interface gráfica para a realização das seguintes operações:
+- Cadastro de consulta
+- Confirmação de consulta
+- Notificação de data de retorno para pacientes.
+- Consultar dados dos pacientes como endereço, email, whatsapp, skype, etc.
+
+UI Views contém o front-end referente a parte de agendamento, paciente, atenção à saúde, Recursos Humanos, estoque e Financeiro e Faturamento.
+
+Models contém a parte de regra de negócio das Views de serão geradas pela fábrica genérica, ou seja, em models haverá toda a estrutura de atributos de acordo com a view específica.
+
+Controllers contém os métodos responsáveis tanto por delegar ações (Actions), para classes controladoras posteriores, quanto por realizar requisições http de acordo com os dados inseridos nos formulários das views que estão em UI Views.
+
+## API Gateway
+
+De acordo com definições da Amazon API Gateway, podemos entender que é um serviço que permite o desenvolver criar, monitorar e manter a API em qualquer escala, funcionando como uma porta de conexão de acesso à dados externos.
+
+Fonte: https://aws.amazon.com/pt/api-gateway/ Acesso em 26 de Jun. 2017. 
+
