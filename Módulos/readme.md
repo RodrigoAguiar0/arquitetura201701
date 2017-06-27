@@ -24,3 +24,12 @@ Fonte: https://aws.amazon.com/pt/api-gateway/ Acesso em 26 de Jun. 2017.
 
 ### Atenção à Saúde
 <img src="especificacao_atencaosaude.png">
+- Em atenção a saúde foi separado dois módulos, um que é o model que conterá as entidades de negócio e o DAO, que fica responsável por realizar o acesso aos dados. DAO (Data Acces Object), padrão utilizado para abstrair e encapsular todo os acessos ao data source. Fonte:
+http://www.devmedia.com.br/implementando-o-data-access-object-no-java-ee/33339 . Acesso em 27 de Jun. 2017.
+
+A entidade Exame, conterá os atributos referente ao exame do paciente, todas as informações pertinente a exame, tais como um conjunto de classes estão nesse módulo. Dessa forma, temos que situaçãoBucal possui uma associação simples com exame, isso é devido ao fato dessa classe utilizar algumas informações do exame para realizar a construção do objeto que contém informações da situação do paciente.
+Assim sendo, faz-se necessário o uso de um módulo que contém os DTO's dos seguintes objetos: Relatorio, HistoricoProcedimento e Medicamento. DTO (Data transfer Object), padrão de projeto que utiliza objetos de entidades de negócio para transferir dados entre subsistemas de um software. Fonte: https://msdn.microsoft.com/en-us/library/ms978717.aspx . Acesso em 26 de Jun. 2017.
+
+- Relatórios : Atendendo ao requisito em que diz que é necessário um relatório de procedientos realizados. Com este padrão de projeto, pode-se fazer transferência de dados de um relatório gerado a partir de um procedimento odontológico ocorrido.
+- Historico de Procedimento: Faz-se necessário o uso de um DTO para trafegar informações das mudanças ocorridas em um procedimento odontológico, tais como se o procedimento foi aberto, cancelado ou realizado.
+- Medicamento: Este módulo possui um conjunto de classes referente ao medicamento prescrito pelo corpo clínico. No entanto, este módulo depende de cadastro prévio a partir de bases como ANVISA. Dessa forma, o uso de DTO para medicamento torna fácil o envio e acesso de dados da parte de medicamentos
