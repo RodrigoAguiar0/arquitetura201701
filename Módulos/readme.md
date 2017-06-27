@@ -41,7 +41,7 @@ Assim sendo, faz-se necessário o uso de um módulo que contém os DTO's dos seg
 
 ## Agendamento
 <img src="Agendamento.png" />
-Descrição:
+Descrição: O módulo de agendamento foi detalhado através dos módulos principais de Model, Dao e Banco de dados de agendamento. Também foram definidas formas de comunicação entre microsserviços, para as quais foi usado Spring Cloud com assistência do Message Broker RabbitMQ para estabelecimento de ambiente de troca de mensagens, e entre microsserviços e banco de dados, para a qual foi usada a técnica de Repository. Para configuração facilitada do projeto foi usado Spring Boot. O sistema de troca de mensagens, que funciona com uma implementação de uma classe Producer(envia a mensagem), uma classe Consumer(recebe a mensagem) e um Message Broker, entre microsserviços oferece uma solução prática para escalabilidade, sendo necessário apenas replicar o microsserviço sobrecarregado. Para a funcionalidade de envio de emails e mensagens SMS foram usados, respectivamente, JavaMail e Twilio, que não consta no diagrama por ser um serviço externo, sem necessidade de implementação. Para segurança de troca de informações foi usado OAuth, que criptografa as informações passadas. Os módulos Paciente e Dentista não são detalhados por não serem relevantes a partir de uma visão do microsserviço de agendamento, que não precisa "saber" de que forma as informações enviadas são processadas nesses módulos antes de serem devolvidas.
 
 ## Paciente
 <img src="especificacao_paciente.png" />
