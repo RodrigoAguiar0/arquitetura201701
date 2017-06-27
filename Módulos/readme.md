@@ -45,7 +45,8 @@ Descrição:
 
 ## Paciente
 <img src="especificacao_paciente.png" />
-Descrição:
+Descrição: O paciente foi dividido através dos módulos de Model e DAO, separando também o uso de mensagens e de infraestruturas externos que podem ser utilizados por modulos de Paciente. Dessa forma a manutenibilidade é elevada, e conseguimos estabelecer a responsabilidade única para cada módulo. O acesso a agenda é feito utilizando os componentes de Consumer e Producer através de mensagens para o agendamento. O cadastro de pacientes pode ser feito diretamente ou através da importação de pacientes, a importação usa da infraestrutura para acessar o BSUS(Barramento SUS) e conseguir os dados necessário. O cadastro de pacientes é armazenado no banco de dados correspondente e através do DAO consegue as informações que lá estão armazenadas.
+
 
 ## Financeiro e Faturamento 
 <img src="FinanceiroFaturamento.png" />
