@@ -23,4 +23,4 @@ De acordo com definições da Amazon API Gateway, podemos entender que é um ser
 Fonte: https://aws.amazon.com/pt/api-gateway/ Acesso em 26 de Jun. 2017. 
 
 ### Atenção à Saúde
-<img src="especificacao_atencaoasaude.png">
+<img src="especificacao_atencaosaude.png">
