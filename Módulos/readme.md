@@ -39,6 +39,9 @@ O módulo DAO fica responsável por realizar a obtenção dos dados para medicam
 
 O módulo infraestrutura que contém "AcessoAnvisa" é apenas uma projeção do módulo de infraestrutura especificado no primeiro diagrama, isso quer dizer que o DaoMedicamento usa um módulo que está em infraestrutura para acessar os dados referente ao medicamento prescrito pelo corpo clínico.
 
-### Agendamento
+## Agendamento
 <img src="Agendamento.png" />
 Descrição:
+
+## Paciente
+<img src="especificacao_paciente.png" />
