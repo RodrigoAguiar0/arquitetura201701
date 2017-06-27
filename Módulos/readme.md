@@ -1,4 +1,4 @@
-<img src="complemento_modulos.png">
+<img src="complemento_modulosxml.png">
 
 O diagrama acima trata-se de uma arquitetura orientada a microserviços, de tal forma que cada microserviço tenha sua responsabilidade em disponibilizar os dados, atendendo os requisitos de qualidade.
 
