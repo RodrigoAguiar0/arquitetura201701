@@ -11,5 +11,5 @@ Trabalho em andamento na disciplina de arquitetura de software, pela Universidad
 ## Diagramas de Componentes
 - [Financeiro Faturamento](https://github.com/RodrigoAguiar0/arquitetura201701/tree/master/Componentes#especificação-financeiro-e-faturamento)
 - [Paciente](https://github.com/RodrigoAguiar0/arquitetura201701/tree/master/Componentes#especificação-paciente)
-- [Atenção a Saúde](https://github.com/RodrigoAguiar0/arquitetura201701/tree/master/Componentes#especificação-atenção-à-saúde)
+- [Atenção a Saúde](https://github.com/RodrigoAguiar0/arquitetura201701/tree/master/Componentes#Especificação-Atenção-a-Saúde)
 - [Agendamento](https://github.com/RodrigoAguiar0/arquitetura201701/tree/master/Componentes#especificação-agendamento)
