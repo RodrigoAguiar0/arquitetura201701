@@ -1,4 +1,4 @@
-<img src="ModulosAltoNivel.png">
+<img src="complemento_modulos.png">
 
 O diagrama mostrado anteriormente é um diagrama de módulo alto nível, ou seja, serve apenas para exemplificar
 o relacionamento entre os módulos, de tal forma que evidencie o uso de funcionalidades um do outro.
