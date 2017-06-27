@@ -35,9 +35,9 @@ Assim sendo, faz-se necessário o uso de um módulo que contém os DTO's dos seg
 - Medicamento: Este módulo possui um conjunto de classes referente ao medicamento prescrito pelo corpo clínico. No entanto, este módulo depende de cadastro prévio a partir de bases como ANVISA. Dessa forma, o uso de DTO para medicamento torna fácil o envio e acesso de dados da parte de medicamentos
 
 ## Data Acces Object | Atenção a Saúde
-O módulo DAO fica responsável por realizar a obtenção dos dados para medicamentos, relatórios e histórico de procedimentos. São um conjunto de interfaces com metódos de busca, inserção e atualização que são implementados por classes posteriores que podem fazer acesso via API Rest utilizando Spring Restful, ou mesmo Spring Cloud realizando as requisições Http necessárias para o microserviço de atenção à saude.
+<p>O módulo DAO fica responsável por realizar a obtenção dos dados para medicamentos, relatórios e histórico de procedimentos. São um conjunto de interfaces com metódos de busca, inserção e atualização que são implementados por classes posteriores que podem fazer acesso via API Rest utilizando Spring Restful, ou mesmo Spring Cloud realizando as requisições Http necessárias para o microserviço de atenção à saude.</p>
 
-O módulo infraestrutura que contém "AcessoAnvisa" é apenas uma projeção do módulo de infraestrutura especificado no primeiro diagrama, isso quer dizer que o DaoMedicamento usa um módulo que está em infraestrutura para acessar os dados referente ao medicamento prescrito pelo corpo clínico.
+<p>O módulo infraestrutura que contém "AcessoAnvisa" é apenas uma projeção do módulo de infraestrutura especificado no primeiro diagrama, isso quer dizer que o DaoMedicamento usa um módulo que está em infraestrutura para acessar os dados referente ao medicamento prescrito pelo corpo clínico.</p>
 
 ## Agendamento
 <img src="Agendamento.png" />
@@ -45,3 +45,7 @@ Descrição:
 
 ## Paciente
 <img src="especificacao_paciente.png" />
+Descrição:
+## Financeiro e Faturamento 
+<img src="FinanceiroFaturamento.png" />
+Descrição:
