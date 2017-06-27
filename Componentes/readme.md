@@ -12,3 +12,7 @@ O componente RabbitMQ é um servidor ativo para trocar de mensagem em sistemas, 
 ### Diagrama de Componentes | Especificação Agendamento
 
 <img src="ComponentesAgendamento.png" />
+
+### Diagrama de Componentes | Especificação Financeiro e Faturamento
+
+<img src="ComponenteFinanceiro.png" />
