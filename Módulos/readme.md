@@ -1,10 +1,10 @@
 <img src="complemento_modulosxml.png">
 
-O diagrama acima trata-se de uma arquitetura orientada a microserviços, de tal forma que cada microserviço tenha sua responsabilidade em disponibilizar os dados, atendendo os requisitos de qualidade.
+O diagrama acima trata de uma arquitetura orientada a microserviços, de tal forma que cada microserviço tenha sua responsabilidade em disponibilizar os dados, atendendo os requisitos de qualidade.
 
 ## Cliente
 O módulo cliente engloba as camadas fábrica, UI Views (User Interface), models e controllers.
-A parte de fábrica funciona de forma genérica, atuando do redirecionamento de aplicações de acordo com a funcionalidade exigida pelo usuário. Um exemplo disso, seria a parte de agendamento, o qual é reponspavel por realizar o agendamento das consultas, de tal forma que, ocorra a disponibilização de uma interface gráfica para a realização das seguintes operações:
+A parte de fábrica funciona de forma genérica, atuando do redirecionamento de aplicações de acordo com a funcionalidade exigida pelo usuário. Um exemplo disso, seria a parte de agendamento, o qual é responsavel por realizar o agendamento das consultas, de tal forma que, ocorra a disponibilização de uma interface gráfica para a realização das seguintes operações:
 - Cadastro de consulta
 - Confirmação de consulta
 - Notificação de data de retorno para pacientes.
@@ -24,10 +24,10 @@ Fonte: https://aws.amazon.com/pt/api-gateway/ Acesso em 26 de Jun. 2017.
 
 ### Atenção à Saúde
 <img src="especificacao_atencaosaude.png">
-- Em atenção a saúde foi separado dois módulos, um que é o model que conterá as entidades de negócio e o DAO, que fica responsável por realizar o acesso aos dados. DAO (Data Acces Object), padrão utilizado para abstrair e encapsular todo os acessos ao data source. Fonte:
+- Em atenção a saúde foi separado dois módulos, um que é o Model que conterá as entidades de negócio e o DAO, que fica responsável por realizar o acesso aos dados. DAO (Data Acces Object), padrão utilizado para abstrair e encapsular todo os acessos ao data source. Fonte:
 http://www.devmedia.com.br/implementando-o-data-access-object-no-java-ee/33339 . Acesso em 27 de Jun. 2017.
 
-A entidade Exame, conterá os atributos referente ao exame do paciente, todas as informações pertinente a exame, tais como um conjunto de classes estão nesse módulo. Dessa forma, temos que situaçãoBucal possui uma associação simples com exame, isso é devido ao fato dessa classe utilizar algumas informações do exame para realizar a construção do objeto que contém informações da situação do paciente.
+A entidade Exame, conterá os atributos referente ao exame do paciente, todas as informações pertinentes a exame, tais como um conjunto de classes estão nesse módulo. Dessa forma, temos que situaçãoBucal possui uma associação simples com exame, isso é devido ao fato dessa classe utilizar algumas informações do exame para realizar a construção do objeto que contém informações da situação do paciente.
 Assim sendo, faz-se necessário o uso de um módulo que contém os DTO's dos seguintes objetos: Relatorio, HistoricoProcedimento e Medicamento. DTO (Data transfer Object), padrão de projeto que utiliza objetos de entidades de negócio para transferir dados entre subsistemas de um software. Fonte: https://msdn.microsoft.com/en-us/library/ms978717.aspx . Acesso em 26 de Jun. 2017.
 
 - Relatórios : Atendendo ao requisito em que diz que é necessário um relatório de procedientos realizados. Com este padrão de projeto, pode-se fazer transferência de dados de um relatório gerado a partir de um procedimento odontológico ocorrido.
