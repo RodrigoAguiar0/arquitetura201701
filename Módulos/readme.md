@@ -46,6 +46,7 @@ Descrição:
 ## Paciente
 <img src="especificacao_paciente.png" />
 Descrição:
+
 ## Financeiro e Faturamento 
 <img src="FinanceiroFaturamento.png" />
 Descrição:
