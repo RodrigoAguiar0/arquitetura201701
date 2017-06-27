@@ -49,4 +49,4 @@ Descrição:
 
 ## Financeiro e Faturamento 
 <img src="FinanceiroFaturamento.png" />
-Descrição:
+Descrição: Para o financeiro, nos utilizamos de vários módulos em cada um dos módulos, para que na forma de responsabilidade, eles estivessem unidos e, em questão de funcionalidade, eles se manterem unitários. Com isso, a manutenibilidade é elevada, e cada microserviço possui responsabilidade única. Além disso, separamos os geradores de documentos do resto do model, para que a produção de documento seja atômica em cada um deles, não parando o serviço caso um deles não funcione. Outra opção interessante foi a criação do controle clínico para a inclusão de requisitos que possuem relação entre si e entre a gerência da clínica e, com isso, unindo as responsabilidades da clínica em um local só.
