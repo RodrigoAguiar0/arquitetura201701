@@ -27,15 +27,23 @@ public class DemoController{
     public DemoController(TaskRepository taskRepository){
         this.repository = taskRepository;
     }
-    
-    //método de procura de objetos no banco de dados
+
+    /**
+    * Método para pesquisa por nome no banco de dados 
+    * @param nome String: Nome pelo qual deve ser feita a pesquisa
+    * @return Task: Objeto encontrado a partir do nome fornecido
+    */
     @RequestMapping("/")
     @ResponseBody
-    Task home() {
-        return repository.findByName("SpringBoot");
+    Task home(String nome) {
+        return repository.findByName(nome);
     }
     
-    //método de inserção de objetos no banco de dados
+    /**
+     * Métoo para criação de objetos Task no banco de dados
+     * @param name String: Atributo name do objeto Task
+     * @return Task: Objeto adicionado no banco de dados
+     */
     @RequestMapping(path = "/", method = RequestMethod.POST)
     @ResponseBody
     Task create(String name){

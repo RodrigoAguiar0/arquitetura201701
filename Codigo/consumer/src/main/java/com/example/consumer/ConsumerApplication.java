@@ -1,6 +1,5 @@
 package com.example.consumer;
 
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.InjectionPoint;
 import org.springframework.boot.SpringApplication;
@@ -14,6 +13,7 @@ import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.messaging.SubscribableChannel;
 
 interface ConsumerChannels {
+
     @Input
     SubscribableChannel producer();
 }
@@ -22,22 +22,30 @@ interface ConsumerChannels {
 @SpringBootApplication
 public class ConsumerApplication {
 
-    @Bean 
+    @Bean
     @Scope("prototype")
-    Logger logger (InjectionPoint ip){
+    Logger logger(InjectionPoint ip) {
         return Logger.getLogger(ip.getDeclaredType().getName());
     }
-    
+
+    /**
+     * Método receptor de mensagens lançadas pelo Producer.
+     * @param c ConsumerChannels: Interface que representa o canal usado pelo 
+     * consumidor para comunicação
+     * @param logger Logger: Objeto responsável por reproduzir o log da 
+     * atividade do método
+     * @return IntegrationFlow
+     */
     @Bean
-    IntegrationFlow integrationFlow(ConsumerChannels c, Logger logger){
+    IntegrationFlow integrationFlow(ConsumerChannels c, Logger logger) {
         return IntegrationFlows.from(c.producer())
-                .handle(String.class, (payload, headers)-> {
-                    logger.info("new message: "  + payload);
-                    System.out.println(payload);
+                .handle(String.class, (payload, headers) -> {
+                    logger.info("new message: " + payload);
                     return null;
                 }).get();
     }
-	public static void main(String[] args) {
-		SpringApplication.run(ConsumerApplication.class, args);
-	}
+
+    public static void main(String[] args) {
+        SpringApplication.run(ConsumerApplication.class, args);
+    }
 }

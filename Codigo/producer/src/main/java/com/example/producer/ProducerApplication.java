@@ -22,6 +22,10 @@ public class ProducerApplication {
         this.consumer = channels.consumer();
     }
     
+    /**
+     * Método para envio de mensagens de saudação
+     * @param name String: Nome ao qual se quer saudar
+     */
     @PostMapping ("/greet/{name}")
     public void publish(@RequestBody String name) {
         String greeting = "Hello, " + name + "!";
